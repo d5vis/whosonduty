@@ -12,7 +12,7 @@ import Typography from "@mui/material/Typography";
 
 function App() {
   const [date, setDate] = useState(new Date());
-  const [building, setBuilding] = useState("DRS");
+  const [building, setBuilding] = useState("DES");
   const [ras, setRas] = useState(["none"]);
 
   const handleChange = (event: SelectChangeEvent) => {

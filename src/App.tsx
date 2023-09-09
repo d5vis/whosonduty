@@ -46,7 +46,7 @@ function App() {
             <MenuItem value={"L56"}>Leavey 5/6</MenuItem>
           </Select>
         </FormControl>
-        <Typography> RA(s) on duty for {date.toLocaleDateString()} </Typography>
+        <Typography> RA(s) on duty</Typography>
         {ras.map((ra) => (
           <Typography>{ra}</Typography>
         ))}

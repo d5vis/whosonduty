@@ -21,7 +21,7 @@ function App() {
 
   useEffect(() => {
     setDate(new Date());
-    const url = `http://d5vis.pythonanywhere.com/`;
+    const url = `https://corsproxy.io/?http://d5vis.pythonanywhere.com/`;
     fetch(url + building)
       .then((r) => r.json())
       .then((r) => setRas(r))

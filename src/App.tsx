@@ -52,7 +52,7 @@ function App() {
         .catch((e) => console.log(e))
         .finally(() => setLoading(false));
     }
-  }, [building]);
+  }, [building, isDutyHours]);
 
   return (
     <Box

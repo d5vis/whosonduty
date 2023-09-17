@@ -2,6 +2,8 @@ import "./App.css";
 import * as React from "react";
 import { useState, useEffect } from "react";
 
+import { useNavigate } from "react-router-dom";
+
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import Divider from "@mui/material/Divider";
@@ -18,8 +20,14 @@ const margin = "24px";
 const dividerMargin = "12px";
 
 function App() {
+  const navigate = useNavigate();
   const [time, setTime] = useState(new Date());
-  const [building, setBuilding] = useState("DES");
+  const [building, setBuilding] = useState(
+    window.location.pathname.replace("/", "")
+  );
+  if (building === "") {
+    setBuilding("DES");
+  }
   const [emoji, setEmoji] = useState("🦖");
   const [ras, setRas] = useState(["none"]);
   const [isDutyHours, setIsDutyHours] = useState(false);
@@ -42,6 +50,7 @@ function App() {
   }, []);
 
   useEffect(() => {
+    navigate(`/${building}`);
     building === "DES" ? setEmoji("🦖") : setEmoji("");
     if (isDutyHours) {
       setLoading(true);
@@ -71,7 +80,7 @@ function App() {
           value={building}
           label="Building"
           onChange={handleChange}
-          disabled={true}
+          // disabled={true}
         >
           <MenuItem value={"DRS"}>Del Rey South</MenuItem>
           <MenuItem value={"DES"}>Desmond</MenuItem>

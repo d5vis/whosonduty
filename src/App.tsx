@@ -102,7 +102,7 @@ function App() {
             ) : (
               <Typography variant="h4"> RA on duty</Typography>
             )}
-            <Typography variant="h6">(310)-864-7448</Typography>
+            {/* <Typography variant="h6">(310)-864-7448</Typography> */}
             {loading ? (
               <CircularProgress />
             ) : (

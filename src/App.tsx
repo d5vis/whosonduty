@@ -4,6 +4,9 @@ import { useState, useEffect } from "react";
 
 import { useNavigate } from "react-router-dom";
 
+import { buildings } from "./utils/constants";
+import { getRaodNumber, getBuildingName } from "./utils/utils";
+
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import Divider from "@mui/material/Divider";
@@ -47,7 +50,7 @@ function App() {
       }
     }, 1000);
     return () => clearInterval(interval);
-  }, []);
+  });
 
   useEffect(() => {
     navigate(`/${building}`);
@@ -61,7 +64,7 @@ function App() {
         .catch((e) => console.log(e))
         .finally(() => setLoading(false));
     }
-  }, [building, isDutyHours]);
+  }, [building, isDutyHours, navigate]);
 
   return (
     <Box
@@ -82,10 +85,9 @@ function App() {
           onChange={handleChange}
           // disabled={true}
         >
-          <MenuItem value={"DRS"}>Del Rey South</MenuItem>
-          <MenuItem value={"DES"}>Desmond</MenuItem>
-          <MenuItem value={"PNHDOH"}>Palm North/Doheny</MenuItem>
-          <MenuItem value={"L56"}>Leavey 5/6</MenuItem>
+          {buildings.map((building) => (
+            <MenuItem value={building}>{getBuildingName(building)}</MenuItem>
+          ))}
         </Select>
       </FormControl>
       <Card sx={{ m: margin, p: margin }} variant="outlined">
@@ -98,11 +100,11 @@ function App() {
         {isDutyHours ? (
           <Box>
             {ras.length > 1 ? (
-              <Typography variant="h4"> RAs on duty</Typography>
+              <Typography variant="h4">RAs on duty:</Typography>
             ) : (
-              <Typography variant="h4"> RA on duty</Typography>
+              <Typography variant="h4">RA on duty:</Typography>
             )}
-            {/* <Typography variant="h6">(310)-864-7448</Typography> */}
+            <Typography variant="h6">{getRaodNumber(building)}</Typography>
             {loading ? (
               <CircularProgress />
             ) : (

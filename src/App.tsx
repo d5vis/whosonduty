@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 import { buildings } from "./utils/constants";
 import { getRaodNumber, getBuildingName } from "./utils/utils";
+import { fetchRas } from "./utils/api";
 
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
@@ -53,14 +54,15 @@ function App() {
   });
 
   useEffect(() => {
+    const getRas = async () => {
+      const data = await fetchRas(building);
+      setRas(data);
+    };
     navigate(`/${building}`);
     building === "DES" ? setEmoji("🦖") : setEmoji("");
     if (isDutyHours) {
       setLoading(true);
-      const url = `https://corsproxy.io/?http://d5vis.pythonanywhere.com/`;
-      fetch(url + building)
-        .then((r) => r.json())
-        .then((r) => setRas(r))
+      getRas()
         .catch((e) => console.log(e))
         .finally(() => setLoading(false));
     }
@@ -86,7 +88,9 @@ function App() {
           // disabled={true}
         >
           {buildings.map((building) => (
-            <MenuItem value={building}>{getBuildingName(building)}</MenuItem>
+            <MenuItem key={building} value={building}>
+              {getBuildingName(building)}
+            </MenuItem>
           ))}
         </Select>
       </FormControl>

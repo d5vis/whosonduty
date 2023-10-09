@@ -1,1 +1,15 @@
-export const buildings = ["DES", "DRS", "PNHDOH", "L56"];
+export const buildings = [
+  "DRN",
+  "DRS",
+  "DES",
+  "HTH",
+  "LO",
+  "L56",
+  "MCC",
+  "MCK",
+  "PNHDOH",
+  "PSA",
+  "RAI",
+  "ROS",
+  "WHE",
+];

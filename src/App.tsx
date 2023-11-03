@@ -47,7 +47,7 @@ function App() {
       if (time.getHours() >= 20 || time.getHours() <= 8) {
         setIsDutyHours(true);
       } else {
-        setIsDutyHours(true);
+        setIsDutyHours(false);
       }
     }, 1000);
     return () => clearInterval(interval);
@@ -136,21 +136,6 @@ function App() {
       >
         <GitHubIcon></GitHubIcon>
         @d5vis
-      </Button>
-      {/* Presentation */}
-      <Button
-        sx={{
-          position: "absolute",
-          right: dividerMargin,
-          bottom: dividerMargin,
-          color: "grey",
-          fontSize: "8px",
-        }}
-        href="https://github.com/d5vis"
-        target="_blank"
-        disabled
-      >
-        presentation version
       </Button>
     </Box>
   );

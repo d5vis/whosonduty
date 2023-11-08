@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 
 import { useNavigate } from "react-router-dom";
 
+import { Analytics } from "@vercel/analytics/react";
+
 import { buildings } from "./utils/constants";
 import { getRaodNumber, getBuildingName } from "./utils/utils";
 import { fetchRas } from "./utils/api";
@@ -137,6 +139,7 @@ function App() {
         <GitHubIcon></GitHubIcon>
         @d5vis
       </Button>
+      <Analytics />
     </Box>
   );
 }

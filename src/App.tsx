@@ -49,7 +49,7 @@ function App() {
       if (time.getHours() >= 20 || time.getHours() <= 8) {
         setIsDutyHours(true);
       } else {
-        setIsDutyHours(false);
+        setIsDutyHours(true);
       }
     }, 1000);
     return () => clearInterval(interval);
@@ -58,7 +58,7 @@ function App() {
   useEffect(() => {
     const getRas = async () => {
       const data = await fetchRas(building);
-      setRas(data);
+      setRas(data.ras);
     };
     navigate(`/${building}`);
     building === "DES" ? setEmoji("🦖") : setEmoji("");

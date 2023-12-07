@@ -49,7 +49,7 @@ function App() {
       if (time.getHours() >= 20 || time.getHours() <= 8) {
         setIsDutyHours(true);
       } else {
-        setIsDutyHours(true);
+        setIsDutyHours(false);
       }
     }, 1000);
     return () => clearInterval(interval);

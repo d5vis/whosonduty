@@ -10,7 +10,7 @@ This tracker fetches its data from the whosonduty API. Access is currently priva
 
 "whosonduty" was presented to LMU Student Housing during an in-service CDT meeting. Its purpose is to help give off-duty RAs a better work-life balance, as residents currently have no way of knowing who the current RA(s) on duty actually are.
 
-![Presentation Image]([https://imgur.com/a/dUyqgth](https://i.imgur.com/vzHl278.png))
+![Presentation Image](https://i.imgur.com/vzHl278.png)
 
 # Analytics
 

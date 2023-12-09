@@ -4,7 +4,19 @@ A live tracker that displays the RA(s) on duty for each residence hall.
 
 # whosonduty-api
 
-This tracker fetches its data from the whosonduty API. Access is currently private.
+This tracker fetches its data from the whosonduty API. Access is currently private due.
+
+# Impact
+
+"whosonduty" was presented to LMU Student Housing during an in-service CDT meeting. Its purpose is to help give off-duty RAs a better work-life balance, as residents currently have no way of knowing who the current RA(s) on duty actually are.
+
+![Presentation Image]([https://imgur.com/a/dUyqgth](https://i.imgur.com/vzHl278.png))
+
+# Analytics
+
+Since release after the November CDT meeting, whosonduty has been used for almost every building by 112 users. Desmond, Del Rey South, Leavey 5 & 6, and Palm South have the highest userbase with posters up containing QR codes.
+
+![Analytics](https://i.imgur.com/FPC1lNi.png)
 
 ## Available Scripts
 

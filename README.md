@@ -1,6 +1,7 @@
 # whosonduty
 
 A live tracker that displays the RA(s) on duty for each residence hall.
+[whosonduty](https://whosonduty.vercel.app)
 
 # whosonduty-api
 

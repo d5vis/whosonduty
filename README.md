@@ -3,9 +3,16 @@
 A live tracker that displays the RA(s) on duty for each residence hall.
 [whosonduty](https://whosonduty.vercel.app)
 
-# whosonduty-api
+# project directory
 
-This tracker fetches its data from the whosonduty API. Access is currently private due.
+This tracker fetches its data from the whosonduty API (located in a separate private repository), which returns the list of current RA(s) on duty for the selected building.
+
+This app was built with React using TypeScript.
+
+- `src/`
+  - contains the main app component displayed on the app
+  - `utils/`
+    - contains abstracted API functions and all constants for mapping building codes to their string names.
 
 # Impact
 

@@ -28,7 +28,7 @@ Since release after the November CDT meeting, whosonduty has been used for almos
 
 ![Analytics](https://i.imgur.com/FPC1lNi.png)
 
-## available Scripts
+## available scripts
 
 In the project directory, you can run:
 

@@ -3,30 +3,32 @@
 A live tracker that displays the RA(s) on duty for each residence hall.
 [whosonduty](https://whosonduty.vercel.app)
 
-# project directory
+# directory structure
 
 This tracker fetches its data from the whosonduty API (located in a separate private repository), which returns the list of current RA(s) on duty for the selected building.
 
 This app was built with React using TypeScript.
 
-- `src/`
-  - contains the main app component displayed on the app
-  - `utils/`
-    - contains abstracted API functions and all constants for mapping building codes to their string names.
+```
+. 
+└── public           # General site information and descriptions
+└── src              # Code containing site components and relevant functions
+    ├── utils        # Utilities for API function abstraction and constant variable maps
+```
 
-# Impact
+# impact
 
 "whosonduty" was presented to LMU Student Housing during an in-service CDT meeting. Its purpose is to help give off-duty RAs a better work-life balance, as residents currently have no way of knowing who the current RA(s) on duty actually are.
 
 ![Presentation Image](https://i.imgur.com/vzHl278.png)
 
-# Analytics
+# analytics
 
 Since release after the November CDT meeting, whosonduty has been used for almost every building by 112 users. Desmond, Del Rey South, Leavey 5 & 6, and Palm South have the highest userbase with posters up containing QR codes.
 
 ![Analytics](https://i.imgur.com/FPC1lNi.png)
 
-## Available Scripts
+## available Scripts
 
 In the project directory, you can run:
 

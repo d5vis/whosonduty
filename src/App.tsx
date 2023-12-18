@@ -35,7 +35,7 @@ function App() {
     setBuilding("DES");
   }
   const [emoji, setEmoji] = useState("🦖");
-  const [ras, setRas] = useState(["none"]);
+  const [ras, setRas] = useState(["No RA(s) are on duty"]);
   const [isDutyHours, setIsDutyHours] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -105,7 +105,7 @@ function App() {
         <Typography variant="h6">{time.toLocaleString()}</Typography>
         {isDutyHours ? (
           <Box>
-            {ras.length > 1 ? (
+            {ras != null && ras.length > 1 ? (
               <Typography variant="h4">RAs on duty:</Typography>
             ) : (
               <Typography variant="h4">RA on duty:</Typography>

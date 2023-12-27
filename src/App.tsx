@@ -27,7 +27,11 @@ function App() {
     window.location.pathname.replace("/", "")
   );
   if (building === "") {
-    setBuilding("DES");
+    if (localStorage.getItem("building") !== null) {
+      setBuilding(localStorage.getItem("building") as string);
+    } else {
+      setBuilding("DES");
+    }
   }
   const [emoji, setEmoji] = useState("🦖");
   const [isDutyHours, setIsDutyHours] = useState(false);

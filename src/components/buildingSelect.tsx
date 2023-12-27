@@ -16,7 +16,9 @@ interface BuildingSelectProps {
 
 const BuildingSelect = (props: BuildingSelectProps) => {
   const handleChange = (event: SelectChangeEvent) => {
-    props.setBuilding(event.target.value as string);
+    const newBuilding = event.target.value as string;
+    props.setBuilding(newBuilding);
+    localStorage.setItem("building", newBuilding);
   };
 
   return (
@@ -28,7 +30,6 @@ const BuildingSelect = (props: BuildingSelectProps) => {
         value={props.building}
         label="Building"
         onChange={handleChange}
-        // disabled={true}
       >
         {buildings.map((building) => (
           <MenuItem key={building} value={building}>

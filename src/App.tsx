@@ -8,11 +8,16 @@ import { Analytics } from "@vercel/analytics/react";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import BuildingSelect from "./components/buildingSelect";
+import ThemeSwitcher from "./components/themeSwitcher";
 import MainCard from "./components/mainCard";
 import Title from "./components/title";
 import Clock from "./components/clock";
 import Ras from "./components/ras";
 import Footer from "./components/footer";
+
+import { ThemeProvider } from "@mui/material/styles";
+import { lightTheme, darkTheme } from "./utils/themes";
+import { CssBaseline } from "@mui/material";
 
 import { dividerMargin } from "./utils/constants";
 
@@ -26,33 +31,40 @@ function App() {
   }
   const [emoji, setEmoji] = useState("🦖");
   const [isDutyHours, setIsDutyHours] = useState(false);
+  const [darkMode, setDarkMode] = useState(
+    localStorage.getItem("darkMode") === "true"
+  );
 
   return (
-    <Box
-      className="App"
-      height="100vh"
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      overflow="hidden"
-    >
-      <BuildingSelect building={building} setBuilding={setBuilding} />
-      <MainCard>
-        <Title building={building} emoji={emoji} />
-        <Divider variant="middle" sx={{ m: dividerMargin }} />
-        <Clock setIsDutyHours={setIsDutyHours} />
-        <Ras
-          building={building}
-          isDutyHours={isDutyHours}
-          navigate={navigate}
-          setEmoji={setEmoji}
-        />
-        <p>Public Safety: (310)-338-2893</p>
-        <p>Facilities Management: (310)-338-7779</p>
-      </MainCard>
-      <Footer />
-      <Analytics />
-    </Box>
+    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+      <CssBaseline />
+      <Box
+        className="App"
+        height="100vh"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        overflow="hidden"
+      >
+        <BuildingSelect building={building} setBuilding={setBuilding} />
+        <ThemeSwitcher darkMode={darkMode} setDarkMode={setDarkMode} />
+        <MainCard>
+          <Title building={building} emoji={emoji} />
+          <Divider variant="middle" sx={{ m: dividerMargin }} />
+          <Clock setIsDutyHours={setIsDutyHours} />
+          <Ras
+            building={building}
+            isDutyHours={isDutyHours}
+            navigate={navigate}
+            setEmoji={setEmoji}
+          />
+          <p>Public Safety: (310)-338-2893</p>
+          <p>Facilities Management: (310)-338-7779</p>
+        </MainCard>
+        <Footer />
+        <Analytics />
+      </Box>
+    </ThemeProvider>
   );
 }
 

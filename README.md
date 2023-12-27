@@ -10,10 +10,11 @@ This tracker fetches its data from the whosonduty API (located in a separate pri
 This app was built with React using TypeScript.
 
 ```
-. 
+.
 └── public           # General site information and descriptions
 └── src              # Code containing site components and relevant functions
-    ├── utils        # Utilities for API function abstraction and constant variable maps
+    ├── components   # Components for each major section of the app
+    ├── utils        # Utilities for themes, API function abstraction, and constant variable maps
 ```
 
 # impact

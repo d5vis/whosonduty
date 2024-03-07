@@ -20,7 +20,11 @@ const Clock = (props: ClockProps) => {
     return () => clearInterval(interval);
   });
 
-  return <Typography variant="h6">{time.toLocaleString()}</Typography>;
+  return (
+    <Typography variant="h6" fontWeight={400}>
+      {time.toLocaleString()}
+    </Typography>
+  );
 };
 
 export default Clock;

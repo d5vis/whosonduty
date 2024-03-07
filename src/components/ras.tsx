@@ -43,12 +43,18 @@ const Ras = (props: RasProps) => {
       {loading ? (
         <CircularProgress />
       ) : (
-        ras?.map((ra) => <Typography variant="h4">{ra}</Typography>)
+        ras?.map((ra) => (
+          <Typography variant="h4" fontWeight="bold">
+            {ra}
+          </Typography>
+        ))
       )}
     </Box>
   ) : (
     <Box>
-      <Typography variant="h5">Duty will begin at 8:00pm</Typography>
+      <Typography variant="h5" fontWeight="bold">
+        Duty will begin at 8:00pm
+      </Typography>
       <p>Locked out? Try heading to the Area Office first</p>
     </Box>
   );

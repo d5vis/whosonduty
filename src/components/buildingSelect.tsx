@@ -2,6 +2,7 @@ import FormControl from "@mui/material/FormControl";
 import MenuItem from "@mui/material/MenuItem";
 import InputLabel from "@mui/material/InputLabel";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
+import Typography from "@mui/material/Typography";
 import { buildings } from "../utils/constants";
 import { getBuildingName } from "../utils/utils";
 
@@ -33,7 +34,7 @@ const BuildingSelect = (props: BuildingSelectProps) => {
       >
         {buildings.map((building) => (
           <MenuItem key={building} value={building}>
-            {getBuildingName(building)}
+            <Typography>{getBuildingName(building)}</Typography>
           </MenuItem>
         ))}
       </Select>

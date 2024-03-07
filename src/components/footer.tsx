@@ -1,11 +1,13 @@
 import Button from "@mui/material/Button";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import Typography from "@mui/material/Typography";
 
 import { dividerMargin } from "../utils/constants";
 
 const Footer = () => {
   return (
     <Button
+      size="small"
       sx={{
         position: "absolute",
         bottom: dividerMargin,
@@ -16,7 +18,7 @@ const Footer = () => {
       disabled
     >
       <GitHubIcon></GitHubIcon>
-      @d5vis
+      <Typography fontWeight="bold">@d5vis</Typography>
     </Button>
   );
 };

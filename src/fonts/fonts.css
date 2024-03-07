@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "Nimbus San L";
+  src: url("NimbusSanL-Reg.otf") format("opentype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Nimbus San L";
+  src: url("NimbusSanL-Bol.otf") format("opentype");
+  font-weight: bold;
+}

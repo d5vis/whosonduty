@@ -9,10 +9,8 @@ interface TitleProps {
 const Title = (props: TitleProps) => {
   return (
     <Box>
-      <Typography variant="h4" fontWeight="bold">
-        🦁 Who's On Duty?
-      </Typography>
-      <Typography variant="h5" fontWeight="bold">
+      <Typography variant="h4">🦁 Who's On Duty?</Typography>
+      <Typography variant="h5">
         {props.building} {props.emoji}
       </Typography>
     </Box>

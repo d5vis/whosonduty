@@ -1,11 +1,17 @@
 @font-face {
-  font-family: "Nimbus San L";
-  src: url("NimbusSanL-Reg.otf") format("opentype");
-  font-weight: normal;
+  font-family: "Metric";
+  src: url("Metric-Bold.otf") format("opentype");
+  font-weight: bold;
 }
 
 @font-face {
-  font-family: "Nimbus San L";
-  src: url("NimbusSanL-Bol.otf") format("opentype");
-  font-weight: bold;
+  font-family: "Metric";
+  src: url("Metric-Medium.otf") format("opentype");
+  font-style: medium;
+}
+
+@font-face {
+  font-family: "Metric";
+  src: url("Metric-Regular.otf") format("opentype");
+  font-weight: normal;
 }

@@ -17,7 +17,7 @@ import Footer from "./components/footer";
 
 import { ThemeProvider } from "@mui/material/styles";
 import { lightTheme, darkTheme } from "./utils/themes";
-import { CssBaseline } from "@mui/material";
+import { CssBaseline, Typography } from "@mui/material";
 
 import { dividerMargin } from "./utils/constants";
 
@@ -62,8 +62,8 @@ function App() {
             navigate={navigate}
             setEmoji={setEmoji}
           />
-          <p>Public Safety: (310)-338-2893</p>
-          <p>Facilities Management: (310)-338-7779</p>
+          <Typography>Public Safety: (310)-338-2893</Typography>
+          <Typography>Facilities Management: (310)-338-7779</Typography>
         </MainCard>
         <Footer />
         <Analytics />

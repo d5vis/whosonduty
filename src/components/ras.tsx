@@ -35,9 +35,13 @@ const Ras = (props: RasProps) => {
   return props.isDutyHours ? (
     <Box>
       {ras != null && ras.length > 1 ? (
-        <Typography variant="h4">RAs on duty:</Typography>
+        <Typography variant="h4" fontWeight="bold">
+          RAs on duty:
+        </Typography>
       ) : (
-        <Typography variant="h4">RA on duty:</Typography>
+        <Typography variant="h4" fontWeight="bold">
+          RA on duty:
+        </Typography>
       )}
       <Typography variant="h6">{getRaodNumber(props.building)}</Typography>
       {loading ? (
@@ -55,7 +59,7 @@ const Ras = (props: RasProps) => {
       <Typography variant="h5" fontWeight="bold">
         Duty will begin at 8:00pm
       </Typography>
-      <p>Locked out? Try heading to the Area Office first</p>
+      <Typography>Locked out? Try heading to the Area Office first</Typography>
     </Box>
   );
 };

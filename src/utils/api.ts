@@ -1,4 +1,4 @@
-const corsProxy = "https://corsproxy.io/?";
+const corsProxy = "https://crossorigin.me/";
 const url = "http://d5vis.pythonanywhere.com/building/";
 
 export const fetchRas = async (building: string) => {

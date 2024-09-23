@@ -1,6 +1,6 @@
 {
-  "short_name": "whosonduty",
-  "name": "Who's on Duty",
+  "short_name": "Who's on Duty?",
+  "name": "Who's on Duty?",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#ab0c2f",
+  "background_color": "#ab0c2f"
 }

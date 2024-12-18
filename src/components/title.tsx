@@ -19,7 +19,7 @@ const Title = ({ building }: { building: string }) => {
       <h1 className="text-4xl">
         <b>Who&apos;s on Duty</b>
       </h1>
-      <h2 className="text-xl">
+      <h2 className="animate-appear text-xl">
         <b>in {getBuildingName(building.toUpperCase())}?</b>
       </h2>
       <Image
@@ -27,11 +27,11 @@ const Title = ({ building }: { building: string }) => {
         alt={`{getBuildingName(building.toUpperCase())}`}
         width={200}
         height={300}
-        className="p-2 h-[147px]"
+        className="animate-appear p-2 h-[147px]"
       />
-      <div className="h-4">
+      <div className="animate-appear h-4">
         {date ? (
-          <span>
+          <span className="animate-appear">
             {date.toLocaleDateString("en-US", {
               weekday: "short",
               year: "numeric",
@@ -41,7 +41,7 @@ const Title = ({ building }: { building: string }) => {
             {date.toLocaleTimeString()}
           </span>
         ) : (
-          <span>Checking the time...</span>
+          <div>Checking the time...</div>
         )}
       </div>
     </div>

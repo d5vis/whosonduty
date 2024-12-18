@@ -39,15 +39,15 @@ const RAList = ({ building }: { building: string }) => {
   }, [isDutyHours]);
 
   return (
-    <div>
+    <div className="animate-appear">
       {isDutyHours ? (
         <div className="flex flex-col items-center justify-center">
           <h2>RA{ras.length > 1 && <span>s</span>} on Duty:</h2>
 
           {loading ? (
-            <div className="h-10 w-48 rounded-md my-4 bg-[#f7ebe6]" />
+            <div className="animate-appear h-10 w-48 rounded-md my-4 bg-[#f7ebe6]" />
           ) : (
-            <span className="text-2xl md:text-3xl my-4 h-10">
+            <span className="animate-appear text-2xl md:text-3xl my-4 h-10">
               <b>
                 {ras.length == 1 ? (
                   <p>{ras[0]}</p>

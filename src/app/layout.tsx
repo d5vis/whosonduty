@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Playfair_Display } from "next/font/google";
 import "./globals.css";
 
+import { Analytics } from "@vercel/analytics/react";
+
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair-display",
   subsets: ["latin"],
@@ -19,6 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Analytics />
       <body
         className={`${playfairDisplay.variable} antialiased bg-mobile bg-center bg-no-repeat bg-cover md:bg-desktop`}
       >

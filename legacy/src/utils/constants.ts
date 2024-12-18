@@ -13,3 +13,7 @@ export const buildings = [
   "ROS",
   "WHE",
 ];
+
+export const margin = "24px";
+
+export const dividerMargin = "12px";

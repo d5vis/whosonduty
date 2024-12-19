@@ -7,12 +7,11 @@
 
 ## Design
 
-<div style="display: flex; height: 500px; gap: 8px; margin: 8px;">
-    <img alt="on duty" src="https://i.imgur.com/eK7CGTW.jpeg"/>
-    <img alt="off duty" src="https://i.imgur.com/qyZo4RH.jpeg" />
-</div>
+| On Duty                                      |                                      Off Duty |
+| :------------------------------------------- | --------------------------------------------: |
+| ![on duty](https://i.imgur.com/eK7CGTW.jpeg) | ![off duty](https://i.imgur.com/qyZo4RH.jpeg) |
 
-This app was originally built with React using TypeScript and later updated to Next.js.
+> This app was originally built with React using TypeScript and later updated to Next.js.
 
 ### File Structure
 

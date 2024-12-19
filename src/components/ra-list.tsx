@@ -13,7 +13,7 @@ const RAList = ({ building }: { building: string }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setDate(new Date());
-      setIsDutyHours(!(date.getHours() >= 20 || date.getHours() < 8));
+      setIsDutyHours(date.getHours() >= 20 || date.getHours() < 8);
     }, 1000);
 
     return () => clearInterval(interval);

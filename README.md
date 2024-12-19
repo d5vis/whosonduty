@@ -1,31 +1,42 @@
-# Who's on Duty
+# Who's on Duty?
 
-A live tracker that displays the RA(s) on duty for each residence hall.
-[whosonduty](https://whosonduty.vercel.app)
+> A live tracker that displays the RA(s) on duty for each residence hall.
+> [Who's on Duty?](https://whosonduty.vercel.app)
 
-# File Structure
+<img alt="Static Badge" src="https://img.shields.io/badge/made%20with%20%3C3%20at-lmu-red?style=flat&labelColor=%230076A5&color=%23AB0C2F">
+
+## Design
+
+<div style="display: flex; height: 500px; gap: 8px; margin: 8px;">
+    <img alt="on duty" src="https://i.imgur.com/eK7CGTW.jpeg"/>
+    <img alt="off duty" src="https://i.imgur.com/qyZo4RH.jpeg" />
+</div>
 
 This app was originally built with React using TypeScript and later updated to Next.js.
+
+### File Structure
 
 ```
 .
 └── legacy          # The original code written for the project
-└── src              # Redesigned code migrated to Next.js functions
+└── src             # Redesign and migration to Next.js
 ```
 
-# Impact
+## Impact
 
-"whosonduty" was originally presented to LMU Student Housing during an in-service CDT meeting. Its purpose is to help give off-duty RAs a better work-life balance, as on-campus residents currently have no way of knowing who the current RA(s) on duty actually are.
+The purpose of "Who's on Duty?" is to help give off-duty RAs a better work-life balance, as on-campus residents currently have no way of knowing who the current RA(s) on duty actually are.
 
 ![Presentation Image](https://i.imgur.com/vzHl278.png)
 
-# analytics
+> "Who's on Duty?" was originally presented to the Student Housing Department @ Loyola Marymount University during an in-service CDT meeting.
 
-Since release after the November CDT meeting, whosonduty has been used for almost every building by over 100 users monthly. Desmond, Del Rey South, Leavey 5 & 6, and Palm South have the highest userbase with posters up containing QR codes.
+## Analytics
+
+Since piloting after the November CDT meeting, "Who's on Duty?" has been used in every building by over 100 users monthly.
 
 ![Analytics](https://i.imgur.com/FPC1lNi.png)
 
-## available scripts
+## Development
 
 In the project directory, you can run:
 

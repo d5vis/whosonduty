@@ -13,7 +13,7 @@ const RAList = ({ building }: { building: string }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setDate(new Date());
-      setIsDutyHours(date.getHours() >= 20 || date.getHours() < 8);
+      setIsDutyHours(!(date.getHours() >= 20 || date.getHours() < 8));
     }, 1000);
 
     return () => clearInterval(interval);
@@ -45,7 +45,9 @@ const RAList = ({ building }: { building: string }) => {
           <h2>RA{ras.length > 1 && <span>s</span>} on Duty:</h2>
 
           {loading ? (
-            <div className="animate-appear h-10 w-48 rounded-md my-4 bg-[#f7ebe6]" />
+            <div className="animate-appear text-2xl md:text-3xl my-4 h-10">
+              <b>Checking the duty calendar...</b>
+            </div>
           ) : (
             <span className="animate-appear text-2xl md:text-3xl my-4 h-10">
               <b>

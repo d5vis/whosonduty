@@ -19,7 +19,7 @@ const getSheetData = async (building: string) => {
   const sheets = google.sheets({ version: "v4", auth });
   const response = await sheets.spreadsheets.values.get({
     spreadsheetId: process.env.SHEET_ID,
-    range: `${building}!B14:D210`,
+    range: `${building}!B12:D172`,
   });
   const values = response.data.values;
   if (!values) return ["No RAs on Duty"];

@@ -25,7 +25,8 @@ const getSheetData = async (building: string) => {
   if (!values) return ["No RAs on Duty"];
 
   let date;
-  if (new Date().getHours() < 8) {
+  // 4PM UTC is 8AM PST
+  if (new Date().getHours() < 16) {
     const yesterday = new Date();
     yesterday.setDate(yesterday.getDate() - 1);
     date = yesterday.toLocaleDateString("en-US", {

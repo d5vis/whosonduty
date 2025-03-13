@@ -27,7 +27,7 @@ const getSheetData = async (building: string) => {
   let date;
   // 4PM UTC is 8AM PST
   if (new Date().getUTCHours() < 16) {
-    const yesterday = new Date();
+    let yesterday = new Date();
     yesterday.setDate(yesterday.getDate() - 1);
     date = yesterday.toLocaleDateString("en-US", {
       timeZone: "America/Los_Angeles",

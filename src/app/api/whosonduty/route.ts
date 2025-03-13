@@ -25,15 +25,22 @@ const getSheetData = async (building: string) => {
   if (!values) return ["No RAs on Duty"];
 
   let date;
-  // 4PM UTC is 8AM PST
-  if (new Date().getUTCHours() < 16) {
-    let yesterday = new Date();
+  // Create date object in PST/PDT
+  const pstDate = new Date().toLocaleString("en-US", {
+    timeZone: "America/Los_Angeles",
+  });
+  const pstDateTime = new Date(pstDate);
+  const hour = pstDateTime.getHours();
+
+  // If it's before 8 AM PST/PDT, get yesterday's date
+  if (hour < 8) {
+    const yesterday = new Date(pstDate);
     yesterday.setDate(yesterday.getDate() - 1);
     date = yesterday.toLocaleDateString("en-US", {
       timeZone: "America/Los_Angeles",
     });
   } else {
-    date = new Date().toLocaleDateString("en-US", {
+    date = new Date(pstDate).toLocaleDateString("en-US", {
       timeZone: "America/Los_Angeles",
     });
   }
